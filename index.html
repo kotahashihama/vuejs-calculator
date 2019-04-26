@@ -8,7 +8,7 @@
 
 <body>
   <div id="cal">
-    <input type="text" v-model="value" style="text-align: right">
+    <input type="text" v-model="value" v-on:blur="initialize()" style="text-align: right" pattern="^[0-9A-Za-z]+$">
 
     <div style="display: flex">
       <div style="number-btns">

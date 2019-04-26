@@ -12,7 +12,9 @@ var cal = new Vue({
     },
     execute: function () {
       this.value = eval(this.value)
-
+    },
+    initialize: function () {
+      if (this.value == '') this.value = 0
     }
   }
 })
