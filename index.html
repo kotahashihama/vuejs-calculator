@@ -4,46 +4,102 @@
 <head>
   <meta charset="UTF-8">
   <title>Vue.js de 電卓</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100vh;
+      background: rgba(241, 231, 103, 1);
+      background: -moz-linear-gradient(top, rgba(241, 231, 103, 1) 0%, rgba(254, 182, 69, 1) 100%);
+      background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(241, 231, 103, 1)), color-stop(100%, rgba(254, 182, 69, 1)));
+      background: -webkit-linear-gradient(top, rgba(241, 231, 103, 1) 0%, rgba(254, 182, 69, 1) 100%);
+      background: -o-linear-gradient(top, rgba(241, 231, 103, 1) 0%, rgba(254, 182, 69, 1) 100%);
+      background: -ms-linear-gradient(top, rgba(241, 231, 103, 1) 0%, rgba(254, 182, 69, 1) 100%);
+      background: linear-gradient(to bottom, rgba(241, 231, 103, 1) 0%, rgba(254, 182, 69, 1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f1e767', endColorstr='#feb645', GradientType=0);
+    }
+
+    #cal {
+      padding: 20px;
+      border-radius: 5px;
+      background: #fff;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .form-view input {
+      display: inline-block;
+      width: 80%;
+    }
+
+    .number-btns {
+      width: 80%;
+    }
+
+    .operator-btns {
+      width: 20%;
+    }
+
+    .buttons {
+      display: flex;
+    }
+
+    .buttons .btn {
+      width: calc(100%/3);
+    }
+
+    .operator-btns .btn {
+      width: 100%;
+    }
+  </style>
 </head>
 
 <body>
   <div id="cal">
-    <input type="text" v-model.trim="value" v-on:blur="validate" style="text-align: right">
-    <button v-on:click="initialize">AC</button>
+    <div class="form-view">
+      <input class="form-control" type="text" v-model.trim="value" v-on:blur="validate" style="text-align: right">
+      <button class="btn btn-primary" v-on:click="initialize">AC</button>
+    </div>
 
     <div style="display: flex">
-      <div style="number-btns">
-        <div>
-          <button v-on:click="addValue(7)">7</button>
-          <button v-on:click="addValue(8)">8</button>
-          <button v-on:click="addValue(9)">9</button>
+      <div class="number-btns">
+        <div class="buttons">
+          <button class="btn btn-primary" v-on:click="addValue(7)">7</button>
+          <button class="btn btn-primary" v-on:click="addValue(8)">8</button>
+          <button class="btn btn-primary" v-on:click="addValue(9)">9</button>
         </div>
-        <div>
-          <button v-on:click="addValue(4)">4</button>
-          <button v-on:click="addValue(5)">5</button>
-          <button v-on:click="addValue(6)">6</button>
+        <div class="buttons">
+          <button class="btn btn-primary" v-on:click="addValue(4)">4</button>
+          <button class="btn btn-primary" v-on:click="addValue(5)">5</button>
+          <button class="btn btn-primary" v-on:click="addValue(6)">6</button>
         </div>
-        <div>
-          <button v-on:click="addValue(1)">1</button>
-          <button v-on:click="addValue(2)">2</button>
-          <button v-on:click="addValue(3)">3</button>
+        <div class="buttons">
+          <button class="btn btn-primary" v-on:click="addValue(1)">1</button>
+          <button class="btn btn-primary" v-on:click="addValue(2)">2</button>
+          <button class="btn btn-primary" v-on:click="addValue(3)">3</button>
         </div>
-        <div>
-          <button v-on:click="addValue(0)">0</button>
-          <button v-on:click="addValue('.')">.</button>
-          <button v-on:click="execute">=</button>
+        <div class="buttons">
+          <button class="btn btn-primary" v-on:click="addValue(0)">0</button>
+          <button class="btn btn-primary" v-on:click="addValue('.')">.</button>
+          <button class="btn btn-primary" v-on:click="execute">=</button>
         </div>
       </div>
 
-      <div style="operator-btns">
-        <div><button v-on:click="addValue('/')">/</button></div>
-        <div><button v-on:click="addValue('*')">*</button></div>
-        <div><button v-on:click="addValue('+')">+</button></div>
-        <div><button v-on:click="addValue('-')">-</button></div>
+      <div class="operator-btns">
+        <button class="btn btn-primary" v-on:click="addValue('/')">/</button>
+        <button class="btn btn-primary" v-on:click="addValue('*')">*</button>
+        <button class="btn btn-primary" v-on:click="addValue('+')">+</button>
+        <button class="btn btn-primary" v-on:click="addValue('-')">-</button>
       </div>
     </div>
 
-    <pre>{{ $data }}</pre>
+    <!-- <pre>{{ $data }}</pre> -->
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
