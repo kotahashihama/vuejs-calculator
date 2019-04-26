@@ -11,7 +11,8 @@ var cal = new Vue({
       this.value += value + ''
     },
     execute: function () {
-      this.value = eval(this.value)
+      if (isNaN(this.value.slice(-1))) this.value = this.value.slice(0, -1)
+      this.value = String(eval(this.value))
     },
     initialize: function () {
       if (this.value == '') this.value = 0

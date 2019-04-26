@@ -8,7 +8,7 @@
 
 <body>
   <div id="cal">
-    <input type="text" v-model="value" v-on:blur="initialize()" style="text-align: right" pattern="^[0-9A-Za-z]+$">
+    <input type="text" v-model="value" v-on:blur="initialize()" style="text-align: right">
 
     <div style="display: flex">
       <div style="number-btns">
@@ -41,6 +41,8 @@
         <div><button v-on:click="addValue('-')">-</button></div>
       </div>
     </div>
+
+    <!-- <pre>{{ $data }}</pre> -->
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
