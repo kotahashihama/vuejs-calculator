@@ -5,9 +5,8 @@ var cal = new Vue({
   },
   methods: {
     addValue: function (value) {
-      if (this.value == 0 && typeof value != 'string') {
-        this.value = ''
-      }
+      if (this.value == 0 && typeof value != 'string') this.value = ''
+      if (isNaN(this.value.slice(-1))) this.value = this.value.slice(0, -1)
       this.value += value + ''
     },
     execute: function () {
@@ -18,9 +17,7 @@ var cal = new Vue({
       this.value = '0'
     },
     validate: function () {
-      if (this.value == '') {
-        this.value = '0'
-      }
+      if (this.value == '') this.value = '0'
     }
   }
 })
