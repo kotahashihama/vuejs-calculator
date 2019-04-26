@@ -8,7 +8,8 @@
 
 <body>
   <div id="cal">
-    <input type="text" v-model="value" v-on:blur="initialize()" style="text-align: right">
+    <input type="text" v-model="value" v-on:blur="validate" style="text-align: right">
+    <button v-on:click="initialize">AC</button>
 
     <div style="display: flex">
       <div style="number-btns">
@@ -30,7 +31,7 @@
         <div>
           <button v-on:click="addValue(0)">0</button>
           <button v-on:click="addValue('.')">.</button>
-          <button v-on:click="execute()">=</button>
+          <button v-on:click="execute">=</button>
         </div>
       </div>
 

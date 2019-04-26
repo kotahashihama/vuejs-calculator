@@ -15,7 +15,12 @@ var cal = new Vue({
       this.value = String(eval(this.value))
     },
     initialize: function () {
-      if (this.value == '') this.value = 0
+      this.value = 0
+    },
+    validate: function () {
+      if (this.value == '') {
+        this.value = 0
+      }
     }
   }
 })
