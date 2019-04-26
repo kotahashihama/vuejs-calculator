@@ -1,7 +1,7 @@
 var cal = new Vue({
   el: '#cal',
   data: {
-    value: 0
+    value: '0'
   },
   methods: {
     addValue: function (value) {
@@ -15,11 +15,11 @@ var cal = new Vue({
       this.value = String(eval(this.value))
     },
     initialize: function () {
-      this.value = 0
+      this.value = '0'
     },
     validate: function () {
       if (this.value == '') {
-        this.value = 0
+        this.value = '0'
       }
     }
   }

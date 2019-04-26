@@ -8,7 +8,7 @@
 
 <body>
   <div id="cal">
-    <input type="text" v-model="value" v-on:blur="validate" style="text-align: right">
+    <input type="text" v-model.trim="value" v-on:blur="validate" style="text-align: right">
     <button v-on:click="initialize">AC</button>
 
     <div style="display: flex">
@@ -43,7 +43,7 @@
       </div>
     </div>
 
-    <!-- <pre>{{ $data }}</pre> -->
+    <pre>{{ $data }}</pre>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
