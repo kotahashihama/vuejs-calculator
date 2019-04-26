@@ -13,32 +13,32 @@
     <div style="display: flex">
       <div style="number-btns">
         <div>
-          <button>7</button>
-          <button>8</button>
-          <button>9</button>
+          <button v-on:click="addValue(7)">7</button>
+          <button v-on:click="addValue(8)">8</button>
+          <button v-on:click="addValue(9)">9</button>
         </div>
         <div>
-          <button>4</button>
-          <button>5</button>
-          <button>6</button>
+          <button v-on:click="addValue(4)">4</button>
+          <button v-on:click="addValue(5)">5</button>
+          <button v-on:click="addValue(6)">6</button>
         </div>
         <div>
-          <button>1</button>
-          <button>2</button>
-          <button>3</button>
+          <button v-on:click="addValue(1)">1</button>
+          <button v-on:click="addValue(2)">2</button>
+          <button v-on:click="addValue(3)">3</button>
         </div>
         <div>
-          <button>0</button>
-          <button>.</button>
-          <button>=</button>
+          <button v-on:click="addValue(0)">0</button>
+          <button v-on:click="addValue('.')">.</button>
+          <button v-on:click="execute()">=</button>
         </div>
       </div>
 
       <div style="operator-btns">
-        <div><button>/</button></div>
-        <div><button>*</button></div>
-        <div><button>+</button></div>
-        <div><button>-</button></div>
+        <div><button v-on:click="addValue('/')">/</button></div>
+        <div><button v-on:click="addValue('*')">*</button></div>
+        <div><button v-on:click="addValue('+')">+</button></div>
+        <div><button v-on:click="addValue('-')">-</button></div>
       </div>
     </div>
   </div>
