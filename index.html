@@ -23,32 +23,32 @@
     <div style="display: flex">
       <div class="number-btns">
         <div class="buttons">
-          <button class="btn btn-secondary" v-on:click="addValue(7)">7</button>
-          <button class="btn btn-secondary" v-on:click="addValue(8)">8</button>
-          <button class="btn btn-secondary" v-on:click="addValue(9)">9</button>
+          <button class="btn btn-secondary" v-on:click="addNumber(7)">7</button>
+          <button class="btn btn-secondary" v-on:click="addNumber(8)">8</button>
+          <button class="btn btn-secondary" v-on:click="addNumber(9)">9</button>
         </div>
         <div class="buttons">
-          <button class="btn btn-secondary" v-on:click="addValue(4)">4</button>
-          <button class="btn btn-secondary" v-on:click="addValue(5)">5</button>
-          <button class="btn btn-secondary" v-on:click="addValue(6)">6</button>
+          <button class="btn btn-secondary" v-on:click="addNumber(4)">4</button>
+          <button class="btn btn-secondary" v-on:click="addNumber(5)">5</button>
+          <button class="btn btn-secondary" v-on:click="addNumber(6)">6</button>
         </div>
         <div class="buttons">
-          <button class="btn btn-secondary" v-on:click="addValue(1)">1</button>
-          <button class="btn btn-secondary" v-on:click="addValue(2)">2</button>
-          <button class="btn btn-secondary" v-on:click="addValue(3)">3</button>
+          <button class="btn btn-secondary" v-on:click="addNumber(1)">1</button>
+          <button class="btn btn-secondary" v-on:click="addNumber(2)">2</button>
+          <button class="btn btn-secondary" v-on:click="addNumber(3)">3</button>
         </div>
         <div class="buttons">
-          <button class="btn btn-secondary" v-on:click="addValue(0)">0</button>
-          <button class="btn btn-secondary" v-on:click="addValue('.')">.</button>
+          <button class="btn btn-secondary" v-on:click="addNumber(0)">0</button>
+          <button class="btn btn-secondary" v-on:click="addNumber('.')">.</button>
           <button class="btn btn-primary" v-on:click="execute"><i class="fas fa-equals"></i></button>
         </div>
       </div>
 
       <div class="operator-btns">
-        <button class="btn btn-primary" v-on:click="addValue('/')"><i class="fas fa-divide"></i></button>
-        <button class="btn btn-primary" v-on:click="addValue('*')"><i class="fas fa-times"></i></button>
-        <button class="btn btn-primary" v-on:click="addValue('+')"><i class="fas fa-plus"></i></button>
-        <button class="btn btn-primary" v-on:click="addValue('-')"><i class="fas fa-minus"></i></button>
+        <button class="btn btn-primary" v-on:click="addOperator('/')"><i class="fas fa-divide"></i></button>
+        <button class="btn btn-primary" v-on:click="addOperator('*')"><i class="fas fa-times"></i></button>
+        <button class="btn btn-primary" v-on:click="addOperator('+')"><i class="fas fa-plus"></i></button>
+        <button class="btn btn-primary" v-on:click="addOperator('-')"><i class="fas fa-minus"></i></button>
       </div>
     </div>
 

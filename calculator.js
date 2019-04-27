@@ -4,10 +4,12 @@ var cal = new Vue({
     value: '0'
   },
   methods: {
-    addValue: function (value) {
-      if (this.value == 0 && typeof value != 'string') this.value = ''
-      if (isNaN(this.value.slice(-1))) this.value = this.value.slice(0, -1)
-      this.value += value + ''
+    addNumber: function (number) {
+      if (this.value == 0 && typeof number != 'string') this.value = ''
+      this.value += number + ''
+    },
+    addOperator: function (operator) {
+      if (!isNaN(this.value.slice(-1))) this.value += operator
     },
     execute: function () {
       if (isNaN(this.value.slice(-1))) this.value = this.value.slice(0, -1)
