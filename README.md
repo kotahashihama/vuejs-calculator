@@ -8,7 +8,7 @@ https://kotahashihama.github.io/vuejs-calculator/
 
 ## 使用技術
 - 言語・・・JavaScript
-- フレームワーク・・・Vue.js
+- フレームワーク・・・Vue.js、Bootstrap
 
 ## バージョン
 - Vue.js 2.6.10
